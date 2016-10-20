@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://love2d.org/style/style.css" />
+		<link rel="stylesheet" type="text/css" href="touch-ups.css" />
+		<style>
+			.codeBox {
+				width: 365px;
+				height: 300px;
+				resize: none;
+				border: 0px;
+
+				padding: 10px;
+				background-color: #b1e3fa;
+				outline: none;
+			}
+			h3 {
+				margin-bottom: 0px;
+			}
+			h2 {
+				margin-bottom: 5px;
+			}
+			
+			#left {
+				float: left;
+			}
+			#right {
+				float: right;
+			}
+			
+			button {
+				clear: both;
+				float: center;
+
+				background-color: #b1e3fa;
+				border-color: #b1e3fa;
+				border-style: solid;
+				outline: none;
+			}
+
+			#convert {
+				font-size: 20px;
+			}
+
+			/* This part is just to fix some stuff */
+			app {
+				display: block;
+				padding: 1em;
+
+				background-size: 200px auto;
+				box-sizing: border-box;
+			}
+			app, footer > section {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 900px;
+			}
+		</style>
+		<script src="converter.js"></script>
+	</head>
+	<body id="germanunkol">
+		<app>
+			<div id="left">
+				<h2>Insert Lua Code Here:</h2>
+				<h3>Methods:</h3>
+
+				<button class="mode" id="import">Import File</button>
+				<button class="mode" id="paste">Paste In Text</button>
+
+				<br />
+
+				<textarea id="luaCode" class="codeBox"></textarea>
+			</div>
+			<div id="right">
+				<h2>JavaScript Code:</h2>
+				<h3>Result Options:</h3>
+
+				<button class="mode" id="wl">Using Love2d API</button>
+				<button class="mode" id="wol">Without Love2d API</button>
+
+				<br />
+
+				<textarea id="JSresults" class="codeBox"></textarea>
+			</div>
+			<center><button id="convert" onclick="convert()"><h2>Click To Convert</h2></button></center>
+		</app>
+	</body>
+</html>

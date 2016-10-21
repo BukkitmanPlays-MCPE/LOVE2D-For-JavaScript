@@ -65,8 +65,8 @@
 				<h2>Insert Lua Code Here:</h2>
 				<h3>Methods:</h3>
 
-				<button class="mode" id="import">Import File</button>
-				<button class="mode" id="paste">Paste In Text</button>
+				<button id="import" onclick="selectOption('left', 1);">Import File</button>
+				<button id="paste" onclick="selectOption('left', 2);">Paste In Text</button>
 
 				<br />
 
@@ -76,14 +76,14 @@
 				<h2>JavaScript Code:</h2>
 				<h3>Result Options:</h3>
 
-				<button class="mode" id="wl">Using Love2d API</button>
-				<button class="mode" id="wol">Without Love2d API</button>
+				<button id="wl" onclick="selectOption('right', 1);">Using Love2d API</button>
+				<button id="wol" onclick="selectOption('right', 2);">Without Love2d API</button>
 
 				<br />
 
 				<textarea id="JSresults" class="codeBox"></textarea>
 			</div>
-			<center><button id="convert" onclick="convert()"><h2>Click To Convert</h2></button></center>
+			<center><button id="convert" onclick="converter.convert()"><h2>Click To Convert</h2></button></center>
 		</app>
 	</body>
 </html>
